@@ -10,11 +10,10 @@ export default function FolderList() {
       <List
         sx={{
           width: "30%",
-          maxWidth: 185,
+          maxWidth: 275,
           bgcolor: "white",
-          overflow: "auto",
-          height: 420,
           float: "left",
+          height: 600,
         }}
       >
         <ListItem>
