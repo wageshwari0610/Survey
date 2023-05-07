@@ -1,6 +1,7 @@
 import DropDown from "./DropDown";
 import viewList from "../images/view_list.png";
 import viewGrid from "../images/view_grid.png";
+import GridList from "./GridList";
 
 function HomePage() {
   return (
