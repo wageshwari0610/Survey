@@ -6,8 +6,10 @@ function App() {
   return (
     <div>
       <NavBar />
-      <SideList />
-      <HomePage />
+      <div className="side-and-main">
+        <SideList />
+        <HomePage />
+      </div>
     </div>
   );
 }

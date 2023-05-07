@@ -10,10 +10,10 @@ function HomePage() {
       </span>
       <DropDown />
       <div className="grid">
-        <img src={viewGrid} />
+        <img alt="gridview" src={viewGrid} />
       </div>
       <div className="list">
-        <img src={viewList} />
+        <img alt="listview" src={viewList} />
       </div>
       <div>
         <button className="btn btn-primary btn-sm">CREATE SURVEY</button>
