@@ -10,8 +10,13 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <SideList />
-      <HomePage />
+      <div className="side-and-main">
+        <SideList />
+        <div className="main-page">
+          <HomePage />
+          <GridList />
+        </div>
+      </div>
     </div>
   );
 }

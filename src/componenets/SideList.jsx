@@ -9,11 +9,8 @@ export default function FolderList() {
     <div className="sideList">
       <List
         sx={{
-          width: "30%",
-          maxWidth: 275,
           bgcolor: "white",
-          float: "left",
-          height: 600,
+          height: "75%",
         }}
       >
         <ListItem>
@@ -34,16 +31,16 @@ export default function FolderList() {
             <b>Requested Surveys</b>
           </span>
         </ListItem>
-        <div className="para">
-          <span>
-            <b>"Hard work will pay off later, laziness"</b>
-          </span>
-          <br />
-          <span className="writer">
-            <b>- Adam Smith</b>
-          </span>
-        </div>
       </List>
+      <div className="para">
+        <span>
+          <b>"Hard work will pay off later, laziness"</b>
+        </span>
+        <br />
+        <span className="writer">
+          <b>- Adam Smith</b>
+        </span>
+      </div>
     </div>
   );
 }
