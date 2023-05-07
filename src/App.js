@@ -10,8 +10,10 @@ function App() {
       <NavBar />
       <div className="side-and-main">
         <SideList />
-        <HomePage />
-        <GridList />
+        <div className="main-page">
+          <HomePage />
+          <GridList />
+        </div>
       </div>
     </div>
   );
