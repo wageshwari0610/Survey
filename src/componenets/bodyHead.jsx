@@ -1,4 +1,4 @@
-function bodyHead() {
+function BodyHead() {
   return (
     <div>
       <div>
@@ -9,4 +9,4 @@ function bodyHead() {
   );
 }
 
-export default bodyHead;
+export default BodyHead;

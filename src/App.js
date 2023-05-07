@@ -1,13 +1,13 @@
 import "./App.css";
 import NavBar from "./componenets/NavBar";
 import SideList from "./componenets/SideList";
-import bodyHead from "./componenets/bodyHead";
+import BodyHead from "./componenets/BodyHead";
 function App() {
   return (
     <div>
       <NavBar />
       <SideList />
-      <bodyHead />
+      <BodyHead />
     </div>
   );
 }
