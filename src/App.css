@@ -10,7 +10,7 @@
   width: 100%;
 }
 .navbar-nav {
-  margin-left: 38%;
+  margin-left: 35%;
 }
 
 .navList {
@@ -96,5 +96,43 @@
   color: #505052a6;
 }
 .hp {
-  margin-left: 50%;
+  margin-left: 20%;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+
+.dropdown {
+  margin-left: 350px;
+  margin-right: 20px;
+}
+
+.sortBy {
+  width: 140px;
+  border: 1.5px solid rgba(241, 227, 38, 0.92);
+  background-color: rgba(240, 221, 198, 0.406);
+  font-size: 11px;
+  margin-left: 5px;
+  height: 30px;
+}
+
+.dropImage {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.grid {
+  background-color: #2d5be7e3;
+  padding: 2px 5px 5px 5px;
+}
+
+.list {
+  border: 1.5px solid rgba(129, 124, 124, 0.502);
+  padding: 2px 3px 3px 3px;
+  margin-right: 20px;
+}
+.btn-sm {
+  font-size: 10px;
+  width: 140px;
 }

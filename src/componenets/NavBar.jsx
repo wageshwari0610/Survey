@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import manager from "../images/manager-5.png";
 import coin from "../images/group-16.png";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Avatar } from "@mui/material";
+import notification from "../images/notification-2.png";
+import calender from "../images/group-2-copy-4.png";
 
 function NavBar() {
   return (
@@ -41,9 +41,9 @@ function NavBar() {
           <span className="token">Tokens</span>
         </div>
         <div className="vl"></div>
-        <CalendarMonthIcon className="calendar" />
+        <img src={calender} />
         <div className="vl"></div>
-        <NotificationsIcon className="calendar" />
+        <img src={notification} />
         <div className="vl"></div>
 
         <Avatar sx={{ width: 20, height: 20 }}>N</Avatar>

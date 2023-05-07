@@ -1,13 +1,16 @@
 import "./App.css";
 import NavBar from "./componenets/NavBar";
 import SideList from "./componenets/SideList";
-import bodyHead from "./componenets/bodyHead";
+import HomePage from "./componenets/HomePage";
+import BoxCard from "./componenets/Card";
+
 function App() {
   return (
     <div>
       <NavBar />
       <SideList />
-      <bodyHead />
+      <HomePage />
+      <BoxCard />
     </div>
   );
 }
