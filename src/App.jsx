@@ -1,22 +1,12 @@
-import "./App.css";
 import NavBar from "./componenets/NavBar";
 import SideList from "./componenets/SideList";
 import HomePage from "./componenets/HomePage";
-import GridList from "./componenets/GridList";
-import ListView from "./componenets/ListView";
-import * as React from "react";
 import CreateSurvey from "./survey_components/CreateSurvey";
 import { Route, Routes, useNavigate } from "react-router-dom";
+import * as React from "react";
+import "./App.css";
 
 function App() {
-  const [view, setView] = React.useState("list");
-
-  const handleChange = (event, nextView) => {
-    if (nextView !== null) {
-      setView(nextView);
-    }
-  };
-
   const navigate = useNavigate();
 
   const handleNavigate = () => {
@@ -32,17 +22,10 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={
-                <HomePage
-                  handleChange={handleChange}
-                  view={view}
-                  handleNavigate={handleNavigate}
-                />
-              }
+              element={<HomePage handleNavigate={handleNavigate} />}
             />
             <Route path="/createSurvey" element={<CreateSurvey />} />
           </Routes>
-          {view == "list" ? <GridList /> : <ListView />}
         </div>
       </div>
     </div>
