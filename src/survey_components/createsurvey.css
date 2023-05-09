@@ -1,3 +1,6 @@
 .navbar {
   background-color: "brown-grey";
+  width: "100%";
+  margin-left: -49px;
+  margin-top: -8px;
 }

@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <NavBar />
       <div className="side-and-main">
         <SideList />{" "}
