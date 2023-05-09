@@ -7,23 +7,14 @@ import * as React from "react";
 import "./App.css";
 
 function App() {
-  const navigate = useNavigate();
-
-  const handleNavigate = () => {
-    navigate("/createSurvey");
-  };
-
   return (
     <div>
       <NavBar />
       <div className="side-and-main">
-        <SideList />{" "}
+        <SideList />
         <div className="main-page">
           <Routes>
-            <Route
-              path="/"
-              element={<HomePage handleNavigate={handleNavigate} />}
-            />
+            <Route path="/" element={<HomePage />} />
             <Route path="/createSurvey" element={<CreateSurvey />} />
           </Routes>
         </div>
