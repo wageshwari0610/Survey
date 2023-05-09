@@ -1,9 +1,10 @@
+import CreateSurvey from "../survey_components/CreateSurvey";
 import DropDown from "./DropDown";
-import viewList from "../images/view_list.png";
-import viewGrid from "../images/view_grid.png";
 import ViewToggleButton from "./ViewToggleButton";
+import * as React from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
-function HomePage() {
+function HomePage(props) {
   return (
     <div className="hp">
       <div className="heading-div">
@@ -12,9 +13,13 @@ function HomePage() {
         </span>
       </div>
       <DropDown />
-      <ViewToggleButton />
+      <ViewToggleButton handleChange={props.handleChange} view={props.view} />
       <div className="create-survey-button">
-        <button style={{ height: "100%" }} className="btn btn-primary btn-sm">
+        <button
+          style={{ height: "100%" }}
+          className="btn btn-primary btn-sm"
+          onClick={props.handleNavigate}
+        >
           CREATE SURVEY
         </button>
       </div>
