@@ -3,6 +3,7 @@ import ViewToggleButton from "./ViewToggleButton";
 import * as React from "react";
 import GridList from "./GridList";
 import ListView from "./ListView";
+import { Link } from "react-router-dom";
 
 function HomePage(props) {
   const [view, setView] = React.useState("list");
@@ -24,16 +25,12 @@ function HomePage(props) {
         <DropDown />
         <ViewToggleButton handleChange={handleChange} view={view} />
         <div className="create-survey-button">
-          <button
-            style={{ height: "100%" }}
-            className="btn btn-primary btn-sm"
-            onClick={props.handleNavigate}
-          >
-            CREATE SURVEY
-          </button>
+          <Link to={"createSurvey"}>
+            <button className="btn btn-primary">CREATE SURVEY</button>
+          </Link>
         </div>
       </div>
-      <div>{view == "list" ? <GridList /> : <ListView />}</div>
+      <div>{view === "list" ? <GridList /> : <ListView />}</div>
     </div>
   );
 }
