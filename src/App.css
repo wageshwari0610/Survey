@@ -124,6 +124,7 @@
   color: #505052a6;
   margin-top: 10px;
 }
+
 .hp {
   margin-top: 25px;
   display: flex;
@@ -181,4 +182,18 @@
   height: 250;
   object-fit: contain;
   padding: 4px, 0px, 4px, 4px;
+}
+
+.side-list-heading {
+  height: 60px;
+}
+
+.side-list-heading h3 {
+  height: 50px;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
 }

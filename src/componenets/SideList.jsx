@@ -7,7 +7,7 @@ import requestinactive from "../images/requested_surveys_inactive.png";
 export default function FolderList() {
   return (
     <div className="sideList">
-      <div>
+      <div className="side-list-heading">
         <h3>Survey</h3>
         <div className="line"></div>
       </div>
