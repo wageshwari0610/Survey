@@ -15,7 +15,7 @@ function HomePage(props) {
   };
 
   return (
-    <div>
+    <div className="main-page">
       <div className="hp">
         <div className="heading-div">
           <span>

@@ -4,8 +4,8 @@ import "./createsurvey.css";
 
 function CreateSurvey() {
   return (
-    <div>
-      <nav className="navbarHeading bg-light">
+    <div className="create-survey-main">
+      <nav className="navbarHeading">
         <h4 className="createSurveyHeading"> Create Survey</h4>
         <h6 className="createSurveysubHeading">Home/MySurveys/CreateSurvey</h6>
       </nav>

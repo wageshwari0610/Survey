@@ -7,18 +7,16 @@ import requestinactive from "../images/requested_surveys_inactive.png";
 export default function FolderList() {
   return (
     <div className="sideList">
+      <div>
+        <h3>Survey</h3>
+        <div className="line"></div>
+      </div>
       <List
         sx={{
           bgcolor: "white",
           height: "75%",
         }}
       >
-        <ListItem>
-          <span>
-            <b>Survey</b>
-          </span>
-        </ListItem>
-        <div className="line"></div>
         <ListItem>
           <img src={mySurvey} className="surveylistIcon" />
           <span className="surveylist">

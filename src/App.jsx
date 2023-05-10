@@ -12,12 +12,10 @@ function App() {
       <NavBar />
       <div className="side-and-main">
         <SideList />
-        <div className="main-page">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/createSurvey" element={<CreateSurvey />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/createSurvey" element={<CreateSurvey />} />
+        </Routes>
       </div>
     </div>
   );

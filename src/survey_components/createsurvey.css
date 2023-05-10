@@ -1,8 +1,9 @@
+.create-survey-main{
+  flex: auto;
+}
+
 .navbarHeading {
-  background-color: "brown-grey";
-  margin-left: -49px;
-  margin-top: -8px;
-  margin-right: -50px;
+  background-color: rgb(149,148,148);
   height: 70px;
 }
 .navbar {
