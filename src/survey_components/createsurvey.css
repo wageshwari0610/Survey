@@ -24,7 +24,7 @@
 }
 .createSurveysubHeading {
   color: rgb(113 113 113);
-  font-size: .8em;
+  font-size: 0.8em;
   margin: 0;
   font-weight: 500;
   line-height: 15px;
@@ -32,20 +32,20 @@
 .bodyHeading {
   margin-top: 30px;
 }
-.input1 {
+#input1 {
   margin-top: 50px;
   border: 2px solid rgba(224, 224, 86, 0.863);
   border-radius: 7px;
   width: 250px;
-  height: 60px;
+  height: 20px;
 }
 
-.teaxtareafield {
+#input2 {
   margin-top: 40px;
   border: 2px solid rgba(224, 224, 86, 0.863);
   border-radius: 7px;
   width: 500px;
-  height: 120px;
+  height: 50px;
 }
 ::placeholder {
   padding: 12px;
@@ -67,6 +67,6 @@
   border: 0px solid rgba(121, 128, 128, 0.25);
 }
 
-.create-survey-body{
+.create-survey-body {
   padding-left: 40px;
 }

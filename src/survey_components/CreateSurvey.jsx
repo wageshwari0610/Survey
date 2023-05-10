@@ -1,4 +1,5 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { TextField } from "@mui/material";
 import React from "react";
 import "./createsurvey.css";
 
@@ -13,12 +14,9 @@ function CreateSurvey() {
         <div>
           <h3 className="bodyHeading">Survey Subject & Description</h3>
         </div>
-        <input placeholder="Survey Name" className="input1"></input>
+        <TextField id="input1" placeholder="Survey Name" />
         <div>
-          <textarea
-            placeholder="Describe your survey"
-            className="teaxtareafield"
-          ></textarea>
+          <TextField id="input2" placeholder="Describe your survey" />
         </div>
         <div className="footerline"></div>
         <div>
