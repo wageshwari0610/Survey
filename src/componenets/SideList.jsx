@@ -5,6 +5,13 @@ import mySurvey from "../images/my_surveys.png";
 import requestinactive from "../images/requested_surveys_inactive.png";
 
 export default function FolderList() {
+  const [activeSurvey, setactiveSurvey] = React.useState("mysurveys");
+  const handleactiveSurvey = (event, requestedsurvey) => {
+    if (requestedsurvey !== null) {
+      setactiveSurvey(requestedsurvey);
+    }
+    console.log(activeSurvey);
+  };
   return (
     <div className="sideList">
       <div className="side-list-heading">
@@ -19,15 +26,15 @@ export default function FolderList() {
       >
         <ListItem>
           <img src={mySurvey} className="surveylistIcon" />
-          <span className="surveylist">
+          <button className="surveylist" onClick={handleactiveSurvey}>
             <b>My Surveys </b>
-          </span>
+          </button>
         </ListItem>
         <ListItem>
           <img src={requestinactive} />
-          <span className="requestedlist">
+          <button className="requestedlist" onClick={handleactiveSurvey}>
             <b>Requested Surveys</b>
-          </span>
+          </button>
         </ListItem>
       </List>
       <div className="para">
