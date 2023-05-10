@@ -2,15 +2,11 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import React from "react";
 import "./createsurvey.css";
 
-function CreateSurvey() {
+function SurveyQues() {
   return (
     <div>
-      <nav className="navbarHeading bg-light">
-        <h4 className="createSurveyHeading"> Create Survey</h4>
-        <h6 className="createSurveysubHeading">Home/MySurveys/CreateSurvey</h6>
-      </nav>
       <div>
-        <h3 className="bodyHeading">Survey Subject & Description</h3>
+        <span>QUESTION 1</span>
       </div>
       <input placeholder="Survey Name" className="input1"></input>
       <div>
@@ -21,7 +17,7 @@ function CreateSurvey() {
       </div>
       <div className="footerline"></div>
       <div>
-        <button className="btncs btn-light">
+        <button className="btn btn-light">
           NEXT
           <ArrowForwardIcon sx={{ marginLeft: 7 }} />
         </button>
@@ -30,4 +26,4 @@ function CreateSurvey() {
   );
 }
 
-export default CreateSurvey;
+export default SurveyQues;

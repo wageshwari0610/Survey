@@ -45,7 +45,7 @@
   margin-top: 320px;
 }
 
-.btncs {
+.btn {
   font-size: 18px;
   width: 180px;
   color: rgb(113 113 113);
@@ -53,5 +53,4 @@
   background-color: rgba(121, 128, 128, 0.25);
   margin-top: 20px;
   padding: 2px, 2px, 2px, 2px;
-  border: 0px solid rgba(121, 128, 128, 0.25);
 }
