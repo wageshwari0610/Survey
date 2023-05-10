@@ -15,7 +15,7 @@ export default function FolderList() {
   return (
     <div className="sideList">
       <div className="side-list-heading">
-        <h3>Survey</h3>
+        <p>Survey</p>
         <div className="line"></div>
       </div>
       <List

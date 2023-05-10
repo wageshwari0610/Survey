@@ -13,7 +13,7 @@
 }
 
 .heading-div h4 {
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -192,12 +192,12 @@
   height: 60px;
 }
 
-.side-list-heading h3 {
-  height: 50px;
-  font-family: "Open Sans";
-  font-size: 24px;
-  font-weight: 600;
+.side-list-heading p {
+  height: 55px;
+  /* font-family: "Open Sans"; */
+  font-size: 1.3em;
+  font-weight: 750;
   display: flex;
   align-items: center;
-  margin-left: 15px;
+  margin: 0 0 0 15px;
 }
