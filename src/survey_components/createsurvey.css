@@ -30,35 +30,82 @@
   line-height: 15px;
 }
 .bodyHeading {
-  margin-top: 30px;
   font-weight: 750;
 }
-#input1 {
-  margin-top: 50px;
-  border: 2px solid rgba(224, 224, 86, 0.863);
-  border-radius: 7px;
+#descInput {
+  height: 40px;
   width: 250px;
-  height: 20px;
+  border: 2px solid rgba(224, 224, 86, 0.863);
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 600;
 }
 
-#input2 {
-  margin-top: 40px;
-  border: 2px solid rgba(224, 224, 86, 0.863);
-  border-radius: 7px;
+#describeInput {
   width: 500px;
-  height: 50px;
+  border: 2px solid rgba(224, 224, 86, 0.863);
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 10px;
+  outline: none;
 }
-::placeholder {
-  padding: 12px;
+
+#describeInput:hover {
+  border: 2px solid rgba(224, 224, 86, 0.863);
+  outline: none;
+}
+
+#descInput:hover {
+  font-weight: 600;
+  border: 2px solid rgba(224, 224, 86, 0.863);
+  outline: none;
+}
+
+#descInput:focus {
+  font-weight: 600;
+  border: 2px solid rgba(224, 224, 86, 0.863);
+  outline: none;
+}
+
+#descInput::-webkit-input-placeholder{
+  font-weight: 500;
+  color: #aeb0b3;
+}
+
+#describeInput::-webkit-input-placeholder {
+  font-weight: 500;
+  color: #aeb0b3;
+}
+
+#descInput:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+#describeInput:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.textAreas label {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #aeb0b3;
+  margin-bottom: 3px;
+  height: 18px;
 }
 
 .footerline {
   border: 1.3px solid #ceced4cf;
-  margin-top: 320px;
+}
+
+.footer{
+  width: 75%;
+  position: absolute;
+  bottom: 15px;
 }
 
 .btncs {
   font-size: 18px;
+  font-weight: 500;
   width: 180px;
   color: rgb(113 113 113);
   height: 55px;
