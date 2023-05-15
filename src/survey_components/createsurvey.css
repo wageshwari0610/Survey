@@ -1,6 +1,7 @@
 .create-survey-main {
   flex: auto;
   background-color: #e6e8ee47;
+  position: relative;
 }
 
 .navbarHeading {
@@ -98,7 +99,7 @@
 }
 
 .footer{
-  width: 75%;
+  width:85%;
   position: absolute;
   bottom: 15px;
 }
