@@ -1,0 +1,95 @@
+.quesHeading {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  padding: 0px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+.question-nav {
+  width: 65%;
+}
+
+.question-description {
+  width: 100%;
+}
+.question-answer {
+  width: 100%;
+}
+.textQuestionAnswer {
+  margin-top: 50px;
+}
+.required-toggle {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+.required-toggle label {
+  margin-right: 20px;
+}
+
+.quesNo {
+  padding-right: 50px;
+  flex: 1;
+}
+
+.footerline {
+  border: 1.3px solid #ceced4cf;
+}
+
+.footer {
+  width: 92%;
+  position: absolute;
+  bottom: 15px;
+}
+
+.btnshare {
+  float: right;
+}
+
+.btnactive {
+  background-color: rgb(62, 136, 242);
+  border: 0px solid rgb(62, 136, 242);
+  color: white;
+}
+
+.btninactive {
+  background-color: rgba(121, 128, 128, 0.25);
+  border: 0px solid rgba(121, 128, 128, 0.25);
+  color: rgba(255, 255, 255, 0.849);
+}
+
+.btncs {
+  font-size: 18px;
+  font-weight: 500;
+  width: fit-content;
+  height: 55px;
+  margin-top: 20px;
+  padding: 0 1rem;
+}
+.btnsurvey {
+  float: right;
+}
+
+.create-question-body {
+  margin-left: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.custom {
+  margin-top: 150px;
+}
+.emojiSelection {
+}

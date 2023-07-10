@@ -1,0 +1,14 @@
+.emojiSelection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.emojiSpace {
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(203, 216, 25, 0.821);
+  border-radius: 5px;
+  padding: 20px;
+  margin-right: 10px;
+}
