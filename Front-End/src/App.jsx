@@ -15,8 +15,8 @@ function App() {
         <SideList />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/createSurvey" element={<CreateSurvey />} />
-          <Route path="/createSurvey/:id" element={<SurveyQues />} />
+          <Route path="/CreateSurvey" element={<CreateSurvey />} />
+          <Route path="/CreateSurvey/:id" element={<SurveyQues />} />
         </Routes>
       </div>
     </div>

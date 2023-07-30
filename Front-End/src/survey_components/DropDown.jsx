@@ -4,7 +4,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import "./dropdown.css";
 
-export default function SelectLabels(props) {
+export default function DropDown(props) {
   return (
     <React.Fragment>
       <FormControl
@@ -13,15 +13,18 @@ export default function SelectLabels(props) {
           minWidth: 200,
         }}
       >
-        <Select value={props.type} onChange={props.handleChange} displayEmpty>
-          <MenuItem value="">
+        <Select
+          value={props.dropDownType}
+          onChange={props.handleChange}
+          displayEmpty
+        >
+          <MenuItem value="Single">
             <em>Single Choice</em>
           </MenuItem>
           <MenuItem value="Multiple">Multiple Choice</MenuItem>
           <MenuItem value="Short">Short Answer</MenuItem>
           <MenuItem value="Long">Long Answer</MenuItem>
           <MenuItem value="Emoji">Emoji Rating</MenuItem>
-          <MenuItem value="Star">Star Rating</MenuItem>
         </Select>
       </FormControl>
     </React.Fragment>

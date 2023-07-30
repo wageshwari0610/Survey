@@ -14,14 +14,12 @@ export default function QuesList() {
     dispatch(deleteQuestion(question));
   };
 
-  console.log(questionList);
-
   return (
     <div className="quesList">
       <List
         sx={{
           bgcolor: "white",
-          height: "75%",
+          height: "85%",
         }}
       >
         <ListItem>
@@ -30,13 +28,13 @@ export default function QuesList() {
             <div className="quesline"></div>
           </div>
         </ListItem>
-        {questionList.length == 0 ? (
+        {questionList.length === 0 ? (
           <div>
             <ListItem>
               <p className="text"> Questions asked will be visible here </p>
             </ListItem>
             <ListItem>
-              <img src={clock} className="imgclock" />
+              <img src={clock} alt="clock" className="imgclock" />
             </ListItem>
           </div>
         ) : (
@@ -44,6 +42,7 @@ export default function QuesList() {
             <div className="questionClose">
               <li>{list.question}</li>
               <img
+                alt="close"
                 src={close}
                 onClick={() => handleCloseQuestion(list.question)}
               />

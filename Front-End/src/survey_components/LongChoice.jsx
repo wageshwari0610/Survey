@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TextareaAutosize } from "@mui/base";
 
 export default function LongChoice(props) {

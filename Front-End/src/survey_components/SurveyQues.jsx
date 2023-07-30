@@ -3,22 +3,22 @@ import QuesList from "./QuesList";
 import React, { useState } from "react";
 import "./surveyques.css";
 import { TextField } from "@mui/material";
-import SelectLabels from "./DropDown";
+import DropDown from "./DropDown";
 import InputField from "./InputField";
 import { useDispatch } from "react-redux";
 import { newQuestion } from "../action";
 import Emoji from "./Emoji";
-import LongChoice from "./LongChoice";
+// import LongChoice from "./LongChoice";
 
 function SurveyQues() {
   const dispatch = useDispatch();
   const [isOptionFocused, setIsOptionFocused] = useState(false);
   const [optionCount, setOptionCount] = useState(2);
   const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState("");
-  const [emoji, setEmoji] = useState("");
-  const [addNewQuestionDisable, setaddNewQuestionDisable] = useState(false);
-  const [dropDownType, setdropDownType] = React.useState("");
+  // const [answer, setAnswer] = useState("wageshwari");
+  // const [emoji, setEmoji] = useState("");
+  const [addNewQuestionDisable, setaddNewQuestionDisable] = useState(true);
+  const [dropDownType, setdropDownType] = React.useState("Single");
   const [option, setOption] = useState({
     Option1: "",
     Option2: "",
@@ -28,17 +28,27 @@ function SurveyQues() {
     Option6: "",
   });
   const handleChangeDropDown = (event) => {
+    setaddNewQuestionDisable(true);
     setdropDownType(event.target.value);
+    setQuestion("");
+    // setAnswer("");
+    setOption({
+      Option1: "",
+      Option2: "",
+      Option3: "",
+      Option4: "",
+      Option5: "",
+      Option6: "",
+    });
   };
   const optionLength = Object.keys(option).reduce((sum, key) => {
     return option[key] === "" ? sum + 0 : sum + 1;
   }, 0);
   const addMoreOptionDisable = optionCount > 6 ? true : false;
-  const btnColor =
-    question && addNewQuestionDisable ? "btncs btnactive" : "btncs btninactive";
 
-  // const addNewQuestionDisable =
-  //   optionLength > 1 && question !== "" ? false : true;
+  const btnColor = addNewQuestionDisable
+    ? "btncs btninactive"
+    : "btncs btnactive";
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -46,39 +56,44 @@ function SurveyQues() {
       ...preState,
       [e.target.name]: e.target.value,
     }));
-    if (optionLength > 1) {
-      setaddNewQuestionDisable(true);
+    if (optionLength > 1 && question !== "") {
+      setaddNewQuestionDisable(false);
     }
   };
   const handleQuestion = (e) => {
     if (e.target.name === "Question") {
       setQuestion(e.target.value);
     }
-  };
-
-  const handleAnswer = (e) => {
-    setAnswer(e.target.value);
-    if (answer !== "") {
-      setaddNewQuestionDisable(true);
-      console.log("answer", addNewQuestionDisable);
+    if (
+      dropDownType === "Short" ||
+      (dropDownType === "Long" && question !== "")
+    ) {
+      setaddNewQuestionDisable(false);
     }
   };
 
-  const handleEmoji = (e) => {
-    setEmoji(e.target.value);
-    if (emoji !== "") {
-      setaddNewQuestionDisable(true);
-    }
-  };
+  // const handleAnswer = (e) => {
+  //   // setAnswer(e.target.value);
+  //   if (answer !== "" && question !== "") {
+  //     setaddNewQuestionDisable(false);
+  //   }
+  // };
+
+  // const handleEmoji = (e) => {
+  //   setEmoji(e.target.value);
+  //   if (emoji !== "") {
+  //     setaddNewQuestionDisable(false);
+  //   }
+  // };
 
   const handleAddOption = (e) => {
     setOptionCount(optionCount + 2);
   };
 
-  const handleAddNewQuestion = (ddType) => {
-    switch (ddType) {
-      case "":
-        const addNewQuestion = {
+  const handleAddNewQuestion = (Type) => {
+    switch (Type) {
+      case "Single":
+        const addNewSingleQuestionOption = {
           isRequired: "false",
           question,
           choices: Object.keys(option).reduce((arr, key) => {
@@ -87,9 +102,10 @@ function SurveyQues() {
             }
             return arr;
           }, []),
-          DDtype: dropDownType,
+          DDtype: Type,
         };
-        dispatch(newQuestion(addNewQuestion));
+
+        dispatch(newQuestion(addNewSingleQuestionOption));
         setQuestion("");
         setOptionCount(2);
         setOption({
@@ -100,8 +116,71 @@ function SurveyQues() {
           Option5: "",
           Option6: "",
         });
+        break;
+      case "Multiple":
+        const addNewMultipleQuestionOption = {
+          isRequired: "false",
+          question,
+          choices: Object.keys(option).reduce((arr, key) => {
+            if (option[key] !== "") {
+              arr.push(option[key]);
+            }
+            return arr;
+          }, []),
+          DDtype: Type,
+        };
 
-      case Short:
+        dispatch(newQuestion(addNewMultipleQuestionOption));
+        setQuestion("");
+        setOptionCount(2);
+        setOption({
+          Option1: "",
+          Option2: "",
+          Option3: "",
+          Option4: "",
+          Option5: "",
+          Option6: "",
+        });
+        break;
+      case "Short":
+        const addNewShortQuestionAnswer = {
+          isRequired: "false",
+          question,
+          choices: "",
+          DDtype: Type,
+        };
+
+        dispatch(newQuestion(addNewShortQuestionAnswer));
+        setQuestion("");
+        // setAnswer("");
+
+        break;
+      case "Long":
+        const addNewLongQuestionAnswer = {
+          isRequired: "false",
+          question,
+          choices: "",
+          DDtype: Type,
+        };
+
+        dispatch(newQuestion(addNewLongQuestionAnswer));
+        setQuestion("");
+        // setAnswer("");
+        break;
+      case "Emoji":
+        const addNewQuestionEmoji = {
+          isRequired: "false",
+          question,
+          choices: "",
+          DDtype: Type,
+        };
+
+        dispatch(newQuestion(addNewQuestionEmoji));
+        setQuestion("");
+        // setEmoji("");
+        break;
+      default:
+        break;
     }
   };
   return (
@@ -127,9 +206,9 @@ function SurveyQues() {
               </div>
             </div>
             <div>
-              <SelectLabels
+              <DropDown
                 handleChange={handleChangeDropDown}
-                type={dropDownType}
+                dropDownType={dropDownType}
               />
             </div>
           </div>
@@ -142,7 +221,7 @@ function SurveyQues() {
             name="Question"
             value={question}
           />
-          {(dropDownType === "" || dropDownType === "Multiple") && (
+          {(dropDownType === "Single" || dropDownType === "Multiple") && (
             <div>
               <div className="options">
                 {Array.from(Array(optionCount)).map((c, index) => {
@@ -168,12 +247,12 @@ function SurveyQues() {
               </button>
             </div>
           )}
-          {(dropDownType === "Short" || dropDownType === "Long") && (
-            <LongChoice handleAnswer={handleAnswer} value={answer} />
-          )}
+          {/* {(dropDownType === "Short" || dropDownType === "Long") && (
+            <LongChoice handleAnswer={handleAnswer} answer={answer} />
+          )} */}
           {dropDownType === "Emoji" && (
             <div>
-              <Emoji handleEmoji={handleEmoji} />
+              <Emoji />
             </div>
           )}
         </div>
@@ -183,7 +262,7 @@ function SurveyQues() {
         <div className="footerline"></div>
         <button
           className={btnColor}
-          onClick={handleAddNewQuestion}
+          onClick={() => handleAddNewQuestion(dropDownType)}
           disabled={addNewQuestionDisable}
         >
           + ADD NEW QUESTION

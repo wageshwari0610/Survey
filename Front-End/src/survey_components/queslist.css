@@ -1,15 +1,14 @@
 .quesList {
   height: 70vh;
   width: 23%;
-  float: right;
   max-width: 250px;
   margin-top: 40px;
-  margin: 40px 30px 0;
+  margin-left: 140px;
 }
 
 .quesline {
   border: 1.3px solid #ceced4cf;
-  margin-right: -50px;
+  /* margin-right: -50px; */
   margin-top: 10px;
 }
 
