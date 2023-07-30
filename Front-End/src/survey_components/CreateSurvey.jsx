@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SurveyNav from "./SurveyNav";
 import InputField from "./InputField";
+import axios from "axios";
 import "./createsurvey.css";
 
 function CreateSurvey() {
@@ -15,6 +16,20 @@ function CreateSurvey() {
   const btnColor =
     surveyName && surveyText ? "btncs btnactive" : "btncs btninactive";
 
+  const handleNextBtn = () => {
+    axios
+      .post(
+        "https://izrmdya4vg.execute-api.ap-south-1.amazonaws.com/prod/create_survey_request",
+        { survey_name: surveyName, survey_description: surveyText },
+        {
+          headers: {
+            Authorization:
+              "Bearer efdhfddfkndsjknfkdsfnsdkjfndskjfnaprwjnkxnfs",
+          },
+        }
+      )
+      .then((response) => console.log(response));
+  };
   const handleChange = (e) => {
     if (e.target.name === "survey name") {
       setSurveyName(e.target.value);
@@ -63,7 +78,11 @@ function CreateSurvey() {
           <div className="footerline"></div>
 
           <Link to={surveyName.replace(" ", "")}>
-            <button className={btnColor} disabled={handleNext}>
+            <button
+              className={btnColor}
+              disabled={handleNext}
+              onClick={handleNextBtn}
+            >
               NEXT
               <ArrowForwardIcon sx={{ marginLeft: 7 }} />
             </button>
